@@ -5,7 +5,7 @@ Home: https://ibmpairs.mybluemix.net
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: open source Python modules for the IBM PAIRS Geoscope platform
 
