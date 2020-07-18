@@ -1,5 +1,5 @@
 {% set name = "ibmpairs" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b022b0801055bcc354535f159f070ddadbb246fe250daadf5d0f2f28c39eed13
+  sha256: 526d48a1e0ffca84ff9161f49cca08f74dabf10f15b4d7ef07efd46662dcd57e
 
 build:
   number: 0
@@ -21,6 +21,8 @@ requirements:
   run:
     - fs
     - future
+    - futures
+    - jsonschema
     - numpy
     - pandas
     - pillow >=1.6
