@@ -1,18 +1,18 @@
 {% set name = "ibmpairs" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b022b0801055bcc354535f159f070ddadbb246fe250daadf5d0f2f28c39eed13
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 526d48a1e0ffca84ff9161f49cca08f74dabf10f15b4d7ef07efd46662dcd57e
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,13 +33,13 @@ test:
   imports:
     - ibmpairs
 about:
-  home: "https://ibmpairs.mybluemix.net"
-  license: "BSD-3-Clause"
+  home: https://ibmpairs.mybluemix.net
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "open source Python modules for the IBM PAIRS Geoscope platform"
-  doc_url: "https://pairs.res.ibm.com/tutorial/"
-  dev_url: "https://github.com/ibm/ibmpairs"
+  summary: open source Python modules for the IBM PAIRS Geoscope platform
+  doc_url: https://pairs.res.ibm.com/tutorial/
+  dev_url: https://github.com/ibm/ibmpairs
 
 extra:
   recipe-maintainers:
