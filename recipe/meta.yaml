@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: 526d48a1e0ffca84ff9161f49cca08f74dabf10f15b4d7ef07efd46662dcd57e
 
 build:
@@ -21,6 +21,8 @@ requirements:
   run:
     - fs
     - future
+    - futures
+    - jsonschema
     - numpy
     - pandas
     - pillow >=1.6
