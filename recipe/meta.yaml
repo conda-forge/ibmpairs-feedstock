@@ -1,13 +1,13 @@
 {% set name = "ibmpairs" %}
-{% set version = "0.1.3" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: efaf67361a0487f3ca1e23f7cc8f3a38dd7a0bc217479c6e24936e73d9b79b1d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9988249be1ee9b7ff7e963af8654f3ffa9b1d9069ffefbb00950e830df07e134
 
 build:
   number: 0
