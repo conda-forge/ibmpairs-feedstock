@@ -10,14 +10,14 @@ source:
   sha256: efaf67361a0487f3ca1e23f7cc8f3a38dd7a0bc217479c6e24936e73d9b79b1d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - fs
     - future
@@ -26,12 +26,14 @@ requirements:
     - numpy
     - pandas
     - pillow >=1.6
-    - python
+    - python >={{ python_min }}
     - pytz
     - requests >=2.4
     - shapely
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ibmpairs
 about:
